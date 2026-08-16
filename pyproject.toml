@@ -1,0 +1,19 @@
+[project]
+name = "entrainement-entretiens"
+version = "0.1.0"
+description = "Entrainement aux entretiens de codage (Python, algo, pytest)"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[tool.pytest.ini_options]
+testpaths = ["exercices"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
